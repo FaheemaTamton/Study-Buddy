@@ -7,22 +7,36 @@
 <title>Study Buddy Dashboard</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fredoka+One&display=swap" rel="stylesheet">  
-  font-size: 3rem;
+
+<style>
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== Background & Layout ===== */
+body {
+    background: linear-gradient(135deg, #1f1f2e, #2a2a3b, #36364a);
+    color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+/* ===== Header ===== */
+.dashboard-heading {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
     color: #d4d4ff;
     text-shadow: 2px 2px 8px rgba(91, 95, 255, 0.5);
     margin-bottom: 40px;
     letter-spacing: 1.2px;
-}
 
-/* ===== Logout Button ===== */
-.logout {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-}
-.button.logout-btn {
-    background: linear-gradient(135deg, #ff6b81, #ff8ba7);
-}
 
 /* ===== Container Layout ===== */
 .container {
