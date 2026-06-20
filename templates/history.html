@@ -123,4 +123,33 @@
     }
 
 </style>
+</head>
+<body>
+    <h1>📚 Study History</h1>
+    <h3>Every minute counts — keep it up! 🌼</h3>
 
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Duration (minutes)</th>
+            <th>Action</th>
+        </tr>
+        {% for s in sessions %}
+        <tr>
+            <td>{{ s.date }}</td>
+            <td>{{ s.duration }}</td>
+            <td>
+                <a href="{{ url_for('delete_session', id=s.id) }}">
+                    <button class="button">Delete</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('index') }}" class="back-btn">⬅ Back to Dashboard</a>
+
+    <footer>Made with 💜 by Study Buddy</footer>
+</body>
+</html>
+{% endblock %}
