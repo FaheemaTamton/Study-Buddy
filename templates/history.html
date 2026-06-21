@@ -1,6 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study Buddy - Session History</title>
+<style>
+    /* ---------- BASE STYLES ---------- */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #f3f4f6, #dce1f0);
+        background: linear-gradient(135deg, #d9dbee, #c9c8e2);
+        color: #2e2e3a;
+        margin: 0;
+        padding: 40px;
+        text-align: center;
+    }
 
+    h1 {
+        font-size: 2.5rem;
+        color: #6b5de4;
+        margin-bottom: 15px;
+        text-shadow: 0 0 10px rgba(107, 93, 228, 0.3);
+    }
 
     h3 {
         color: #5e5e6a;
@@ -105,25 +127,6 @@
 <body>
     <h1>📚 Study History</h1>
     <h3>Every minute counts — keep it up! 🌼</h3>
-
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Duration (minutes)</th>
-            <th>Action</th>
-        </tr>
-        {% for s in sessions %}
-        <tr>
-            <td>{{ s.date }}</td>
-            <td>{{ s.duration }}</td>
-            <td>
-                <a href="{{ url_for('delete_session', id=s.id) }}">
-                    <button class="button">Delete</button>
-                </a>
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
 
     <a href="{{ url_for('index') }}" class="back-btn">⬅ Back to Dashboard</a>
 
