@@ -204,6 +204,26 @@ footer {
             <button class="button" onclick="saveSettings()">Save</button>
         </div>
 
+        <br>
+        <a href="{{ url_for('history') }}"><button class="button">📖 View History</button></a>
+    </div>
+
+    <!-- Stats & Messages Card -->
+    <div class="card">
+        <div class="message">{{ message }}</div>
+
+        <div class="stats">
+            <div>Total Minutes Today: <span class="badge">{{ total_minutes }}</span></div>
+            <div>Current Streak: <span class="badge">{{ streak }} days</span></div>
+        </div>
+
+        <br>
+        <form action="{{ url_for('add_session') }}" method="post">
+            <input type="number" name="duration" value="25" min="1">
+            <button class="button">+ Log Session</button>
+        </form>
+    </div>
+</div>
 
 <script>
 
