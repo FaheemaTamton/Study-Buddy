@@ -194,28 +194,6 @@ footer {
         <button class="button" onclick="startTimer()">Start</button>
         <button class="button" onclick="resetTimer()">Reset</button>
 
-        <div class="settings">
-            <label>Study (min):</label><br>
-            <input type="number" id="studyDuration" value="25" min="1"><br><br>
-
-            <label>Break (min):</label><br>
-            <input type="number" id="breakDuration" value="5" min="1"><br><br>
-
-            <button class="button" onclick="saveSettings()">Save</button>
-        </div>
-
-        <br>
-        <a href="{{ url_for('history') }}"><button class="button">📖 View History</button></a>
-    </div>
-
-    <!-- Stats & Messages Card -->
-    <div class="card">
-        <div class="message">{{ message }}</div>
-
-        <div class="stats">
-            <div>Total Minutes Today: <span class="badge">{{ total_minutes }}</span></div>
-            <div>Current Streak: <span class="badge">{{ streak }} days</span></div>
-        </div>
 
         <br>
         <form action="{{ url_for('add_session') }}" method="post">
